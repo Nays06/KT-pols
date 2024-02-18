@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KT</title>
+    <style>
+        .ran{
+            width: 500px;
+            background-color: red;
+        }
+
+        .go{
+            width: 500px;
+            display: flex;
+            justify-content: space-between;
+            margin-left: 6px;
+        }
+
+        .go div{
+            width: 22px;
+        }
+
+        .ran {
+            accent-color: green;
+            
+        }
+
+        .ran::-webkit-slider-runnable-track {
+            height: 7px;
+            border-radius: 10px;
+            background: linear-gradient(
+              to right,
+              rgb(58, 235, 102) 20% 78.9%,
+              rgb(218, 60, 60) 78.9%
+            );
+        }
+    
+        .ran::-webkit-slider-thumb {
+            background: #ecf0f1;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            -webkit-appearance: none;
+            margin-top: -4px;
+        }
+
+        .vtor{
+            width: 500px;
+            accent-color: rgb(0, 132, 255);
+        }
+
+        .polosi1{
+            width: 498px;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            top: 18px;
+            left: 3px;
+        }
+
+        .abc{
+            width: 6px;
+            height: 15px;
+            background-color: rgb(0, 132, 255);
+            border-radius: 10px;
+        }
+
+        #treug::-webkit-slider-thumb{
+            -webkit-appearance: none;
+            height: 18px;
+            width: 18px;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-top: 20px solid #f00;
+            margin-bottom: 23px;
+        }
+
+        #treug{
+            -webkit-appearance: none;
+            width: 500px;
+            height: 5px;
+            background: linear-gradient(90deg, red 100%, white 100%);
+        }
+
+        .tyu{
+            width: 500px;
+            height: 7px;
+        }
+
+        .skfksdkf{
+            margin-left: 10px;
+            width: 485px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .poloskiii{
+            width: 3px;
+            height: 10px;
+            background-color: rgb(14, 133, 189);
+        }
+
+        .slider{
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider" style="margin-top: 0;">
+        <h1>Track</h1>
+        <input type="range" list="values" value="0" class="ran">
+
+        <div class="go">
+            <div>0</div>
+            <div>20</div>
+            <div>40</div>
+            <div>60</div>
+            <div>80</div>
+            <div>100</div>
+        </div>
+        <br>
+        <output id="value" style="margin-left: 5px;"></output>
+
+        <datalist id="values">
+            <option value="0" label="0"></option>
+            <option value="20" label="20"></option>
+            <option value="40" label="40"></option>
+            <option value="60" label="60"></option>
+            <option value="80" label="80"></option>
+            <option value="100" label="100"></option>
+        </datalist>
+    </div>
+
+    <div class="slider">
+        <h1>Divisor</h1>
+        <div class="polosi1">
+            <div class="abc"></div>
+            <div class="abc"></div>
+            <div class="abc"></div>
+            <div class="abc"></div>
+            <div class="abc"></div>
+            <div class="abc"></div>
+            <div class="abc"></div>
+            <div class="abc"></div>
+            <div class="abc"></div>
+            <div class="abc"></div>
+            <div class="abc"></div>
+        </div>
+
+
+        <input type="range" class="vtor" style="position: relative">
+    </div>
+
+    <div class="slider">
+        <h1>Thumb</h1>
+        <input type="range" id="treug" value="100">
+    </div>
+
+    <div class="slider">
+        <h1>Tick</h1>
+        <div class="skfksdkf">
+            <div class="poloskiii"></div>
+            <div class="poloskiii"></div>
+            <div class="poloskiii"></div>
+            <div class="poloskiii"></div>
+            <div class="poloskiii"></div>
+            <div class="poloskiii"></div>
+            <div class="poloskiii"></div>
+            <div class="poloskiii"></div>
+            <div class="poloskiii"></div>
+            <div class="poloskiii"></div>
+            <div class="poloskiii"></div>
+            <div class="poloskiii"></div>
+            <div class="poloskiii"></div>
+            <div class="poloskiii"></div>
+            <div class="poloskiii"></div>
+            <div class="poloskiii"></div>
+            <div class="poloskiii"></div>
+            <div class="poloskiii"></div>
+            <div class="poloskiii"></div>
+            <div class="poloskiii"></div>
+            <div class="poloskiii"></div>
+            <div class="poloskiii"></div>
+            <div class="poloskiii"></div>
+            <div class="poloskiii"></div>
+            <div class="poloskiii"></div>
+            <div class="poloskiii"></div>
+            <div class="poloskiii"></div>
+            <div class="poloskiii"></div>
+            <div class="poloskiii"></div>
+            <div class="poloskiii"></div>
+        </div>
+
+        <input type="range" class="tyu" min="1" max="100">
+    </div>
+
+
+    <script>
+        let slider1 = document.getElementById('treug');
+        slider1.addEventListener('mousemove', () => {
+            let val = slider1.value;
+            slider1.style.background = `linear-gradient(90deg, red ${val}%, white ${val}%)`;
+        })
+    </script>
+</body>
+</html>
